@@ -87,8 +87,14 @@ def try_different_settings(data_train, label_train):
 
 ```
 
-Example usage of the model:
 
+
+# Usage
+To use the model:
+
+- Update data and ML model using the run command provide in main.ipynb
+
+- Either call the .predict() or .score() feature of the model directly:
 ``` python
 all_games_forest = RandomForestClassifier(n_estimators=100, max_depth=10, max_features="sqrt", random_state=110)
 all_games_forest.fit(data_train, label_train)
@@ -96,12 +102,10 @@ effectiveness = all_games_forest.score(data_test, label_test)
 print(f"Model effectiveness: {round(effectiveness, 4)}")
 ```
 
-# Usage
-To use the model:
-
-Scrape and update data using the provided scraper in main.ipynb
-Follow the syntax of the example command provided ex: predict_winner("Patriots", "Eagles", 2024)
-
+Or call a function to predict the winner of two teams in a given year without any data manipulation:
+``` python
+ predict_winner("Patriots", "Eagles", 2024)
+```
 # Additional Features
 Pre-scraped data: The DataSets folder contains 3 CSV files with pre-scraped NFL statistics, avoiding the need to rerun the scraper each time.
 Visualizations: Statistical visualizations of the model's results are available in the Visualizations folder.
