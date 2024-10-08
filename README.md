@@ -107,6 +107,6 @@ Or call a function to predict the winner of two teams in a given year without an
  predict_winner("Patriots", "Eagles", 2024)
 ```
 # Additional Features
-Pre-scraped data: The DataSets folder contains 3 CSV files with pre-scraped NFL statistics, avoiding the need to rerun the scraper each time.
-Visualizations: Statistical visualizations of the model's results are available in the Visualizations folder.
-Statistical Testing: Further analysis of the model’s predictions can be done through the statistical_exploration.ipynb notebook, where statistical tests and data exploration are carried out.
+- Pre-scraped data: The DataSets folder contains 3 CSV files with pre-scraped NFL statistics, avoiding the need to rerun the scraper each time.
+- Visualizations: Statistical visualizations of the model's results are available in the Visualizations folder.
+- Statistical Testing: Further analysis of the model’s predictions can be done through the statistical_exploration.ipynb notebook, where statistical tests and data exploration are carried out.
