@@ -1,7 +1,7 @@
 # NFL Sports Betting Model
 
 ## Overview
-This project leverages machine learning to predict NFL game outcomes and Super Bowl winners based on publicly available statistics. The model scrapes historical NFL data and trains a RandomForest classifier using **scikit-learn** to forecast the likelihood of a given team winning the Super Bowl or to predict which team will win a particular matchup based on prior season statistics.
+This project leverages machine learning to predict NFL game outcomes and Super Bowl winners based on NFL team statistics sourced from https://www.nfl.com/stats/team-stats/ and similar websites. The model scrapes historical NFL data and trains two RandomForest classifiers using **scikit-learn**. One which forecasts the likelihood of a given team winning the Super Bowl in its year, and a second to predict which of two teams will win a particular game based on their team statistics last year.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -15,24 +15,27 @@ This project leverages machine learning to predict NFL game outcomes and Super B
 To run this project, you will need Python 3.x and the following Python libraries:
 
 ```bash
-pip install requests beautifulsoup4 pandas numpy matplotlib seaborn scikit-learn scipy
+pip install lxml requests beautifulsoup4 pandas numpy matplotlib seaborn scikit-learn scipy
 ```
 Ensure you have the following libraries installed:
 
 requests, BeautifulSoup for web scraping
+lxml as a dependency for the requests module
 pandas, numpy for data processing
 matplotlib, seaborn for visualizations
 scikit-learn, scipy for machine learning and statistical analysis
+
 Dataset
-The project scrapes NFL team statistics from the official NFL website, covering offense, defense, and special teams for various seasons. These statistics are stored in 3 CSV files located in the DataSets folder to avoid repeatedly scraping the web. The dataset contains information such as:
+The project scrapes NFL team statistics from the official NFL website, covering offense, defense, and special teams for various seasons. The results of the webscraping are stored in 3 CSV files located in the DataSets folder to avoid repeatedly scraping the web; however, they will be automatically updated when more data is publically available. The dataset contains information such as:
 
 Team (NFL Team)
 Year (Season Year)
 Offense: Passing, Rushing, Receiving stats, etc.
 Defense: Tackles, Interceptions, etc.
 Special Teams: Field goals, Kick returns, etc.
-Data Processing
-The data is collected through custom scraper functions. Here's a snippet of how the historical data is processed:
+
+## Data Gathering
+The data is collected through custom scraper functions. Here's a snippet of how the historical data is gathered:
 
 ``` python
 # NFL Historical Data Scraper
