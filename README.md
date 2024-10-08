@@ -7,7 +7,6 @@ This project leverages machine learning to predict NFL game outcomes and Super B
 - [Installation](#installation)
 - [Dataset](#dataset)
 - [Model Training](#model-training)
-- [Making Predictions](#making-predictions)
 - [Usage](#usage)
 - [Additional Features](#additional-features)
 
